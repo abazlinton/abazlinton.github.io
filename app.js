@@ -1,4 +1,4 @@
-var herokuUrl = "http://wobble-mind.herokuapp.com";
+var herokuUrl = "https://wobble-mind.herokuapp.com";
 var interval;
 var noRequests = 0;
 
