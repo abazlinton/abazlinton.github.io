@@ -18,7 +18,7 @@ function request () {
   
   xhr.onload = function () {
     clearInterval(interval);
-    redirect();
+//     redirect();
   };
   
   xhr.ontimeout = function (e) {
