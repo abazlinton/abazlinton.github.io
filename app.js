@@ -12,7 +12,7 @@ function redirect () {
 
 function request () {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "https://yqd5anxtug.execute-api.eu-west-1.amazonaws.com/prod/testLamdaApiGateway");
+  xhr.open('GET', "https://yqd5anxtug.execute-api.eu-west-1.amazonaws.com/prod/testLamdaApiGateway?type=poll");
   
   xhr.onload = function () {
     if (state === "ready") {
