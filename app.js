@@ -18,17 +18,16 @@ function request () {
     if (state === "ready") {
       clearInterval(interval);
       redirect();
-    };
+    } else if state === "waiting" {
+      var countdown = document.getElementById('countdown');
+      countdown.innerText = "Retries:" + noRequests;
+    }
   };
   
   xhr.onerror = function(e){
     console.log(e);
   }
-
-  xhr.ontimeout = function (e) {
-    var countdown = document.getElementById('countdown');
-    countdown.innerText = "Retries:" + noRequests;
-  };
+  
   xhr.send(null);
   noRequests++;
 } 
