@@ -18,7 +18,7 @@ function request () {
     if (state === "ready") {
       clearInterval(interval);
       redirect();
-    } else if state === "waiting" {
+    } else if (state === "waiting") {
       var countdown = document.getElementById('countdown');
       countdown.innerText = "Retries:" + noRequests;
     }
