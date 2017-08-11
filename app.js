@@ -14,12 +14,11 @@ function request () {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', "https://yqd5anxtug.execute-api.eu-west-1.amazonaws.com/prod/testLamdaApiGateway");
   
-  xhr.timeout = 500; // time in milliseconds
-  
   xhr.onload = function () {
-    console.log(state);
-    clearInterval(interval);
-    redirect();
+    if (state === "ready") {
+      clearInterval(interval);
+      redirect();
+    };
   };
   
   xhr.onerror = function(e){
